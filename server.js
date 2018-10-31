@@ -8,9 +8,9 @@ const morgan = require('morgan');
 
 const apiRouter = require('./api/api');
 
-app.use('/api', apiRouter);
 app.use(bodyParser.json());
 app.use(cors());
+app.use('/api', apiRouter);
 app.use(errorhandler());
 app.use(morgan('dev'));
 
